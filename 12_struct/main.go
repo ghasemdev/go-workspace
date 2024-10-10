@@ -19,6 +19,7 @@ func main() {
 		Symbol: "MICROSOFT",
 		Volume: 15,
 		Price:  99.98,
-		Buy:    false}
+		Buy:    false,
+	}
 	fmt.Printf("t2: %+v\n", t2)
 }
