@@ -20,4 +20,7 @@ func main() {
 	for i, v := range foo {
 		fmt.Printf("index %d, value %s \n", i, v)
 	}
+
+	foo = append(foo, "FUCK")
+	fmt.Println(foo)
 }
