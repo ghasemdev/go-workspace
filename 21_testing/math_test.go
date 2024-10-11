@@ -45,3 +45,20 @@ func TestMany(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkXxx(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		_, err := Sqrt(float64(i))
+		if err != nil {
+			b.Fatal(err)
+		}
+	}
+}
+
+// BENCHMARKING
+// $ go test -v -bench .
+// $ go test -v -bench . -run A
+
+// PROFILING
+// $ go test -v -bench . -run A -cpuprofile=prof.out
+// $ go tool pprof prof.out
